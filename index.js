@@ -12,7 +12,7 @@
 // DO NOT EDIT BELOW THIS LINE
 try {
     module.exports = {
-        Product
+        Product,
     }
 } catch(e){
 
@@ -20,6 +20,7 @@ try {
 
 try {
     module.exports = {
+        Product,
         Cart
     }
 } catch(e){
@@ -28,6 +29,8 @@ try {
 
 try {
     module.exports = {
+        Product,
+        Cart,
         Customer
     }
 } catch(e){
@@ -36,6 +39,9 @@ try {
 
 try {
     module.exports = {
+        Product,
+        Cart,
+        Customer,
         Auth
     }
 } catch(e){

@@ -24,6 +24,7 @@ npm test
         - `display()` returns a string in the following format `"Name: <NAME>, Price: $<PRICE>, Description: <DESCRIPTION>"`.
 2. Export the class using `module.exports`.
 3. Import the class into `index.js` with the name `Product`.
+4. Save and run `npm test`. The first 3 tests should now pass.
 
 ### Example
 ```javascript
@@ -47,6 +48,7 @@ As your online marketplace grows, you realize that users need a way to save prod
         - `removeProduct(i)`: A method that removes a `Product` instance from the `products` array at a specified index `i` and updates the `total` property accordingly.
 2. Export the class using `module.exports`.
 3. Import the class into `index.js` with the name `Cart`.
+4. Save and run `npm test`. 6 tests should now pass.
 
 ### Example
 
@@ -81,6 +83,7 @@ With the `Product` and `Cart` classes in place, you've got the basic building bl
 
 2. In `Customer.js`, export the `Customer` class using `module.exports`.
 3. Import the class into `index.js` with the name `Customer`.
+4. Save and run `npm test`. 9 tests should now pass.
 
 ### Examples
 ```javascript
@@ -122,6 +125,7 @@ With the `Product`, `Cart`, and `Customer` classes in place, your online marketp
         - `login(email)`: a method that takes an `email` as an argument and returns the corresponding `Customer` instance from the `customers` array.
 2. Export the `Auth` class using `module.exports`.
 3. Import the class into `index.js` with the name `Auth`.
+4. Save and run `npm test`. All tests should now pass.
 
 ### Examples
 ```javascript
