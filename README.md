@@ -1,3 +1,5 @@
+![logo](https://user-images.githubusercontent.com/44912347/202244850-18dbf275-11cf-44b5-9500-b2fcb5d44d05.jpg)
+
 # FarmersList 🧑‍🌾
 
 You are a startup founder building a new online marketplace that connects small, independent farmers with consumers who are passionate about buying local and supporting sustainable agriculture. In this marketplace, farmers will be able to create profiles and list their products, and consumers will be able to browse and purchase products directly from the farmers. 
