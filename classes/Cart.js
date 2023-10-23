@@ -13,6 +13,13 @@ class Cart {
         const product = this.products.splice(idx, 1)[0];
         this.total -= product.price;
     }
+    getTotal(){
+        return this.total;
+    }
+    clear(){
+        this.products = [];
+        this.total = 0;
+    }
 }
 
 module.exports = { Cart };
