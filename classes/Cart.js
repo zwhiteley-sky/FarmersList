@@ -21,12 +21,20 @@ class Cart {
         const product = this.products.splice(idx, 1)[0];
         this.total -= product.price;
     }
-    getTotal(){
+
+    getTotal() {
         return this.total;
     }
-    clear(){
+
+    clear() {
         this.products = [];
         this.total = 0;
+    }
+
+    removeProductByName(name) {
+        const idx = this.products.indexOf(p => p.name === name);
+        if (idx === -1) return;
+        this.removeProduct(idx);
     }
 }
 
