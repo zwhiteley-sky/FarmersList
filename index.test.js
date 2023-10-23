@@ -49,6 +49,19 @@ describe("Cart Tests", () => {
         expect(myCart.products.length).toEqual(2);
         expect(myCart.total).toEqual(8);
     });
+
+    test('Can remove products to array with removeProductByName and total is updated', () => {
+        const strawberries = new Product("Strawberries", 5, "The freshest fresas on the market");
+        const carrots = new Product("Carrots", 2, "Perfect for an afternoon snack");
+        const mangos = new Product("Mangos", 3, "The tastiest fruit you can buy");
+        const myCart = new Cart();
+        myCart.addProduct(carrots);
+        myCart.addProduct(mangos);
+        myCart.addProduct(strawberries);
+        myCart.removeProduct(carrots.name);
+        expect(myCart.products.length).toEqual(2);
+        expect(myCart.total).toEqual(8);
+    });
 })
 
 describe("Customer Tests", () => {
@@ -83,6 +96,26 @@ describe("Customer Tests", () => {
         expect(francis.orderHistory.length).toEqual(1);
         francis.addToOrderHistory(mySecondOrder);
         expect(francis.orderHistory.length).toEqual(2);
+    });
+
+    test('Reward points calculated correctly', () => {
+        const francis = new Customer("Francis", "francis@gmail.com", "222 Main St");
+        const strawberries = new Product("Strawberries", 5, "The freshest fresas on the market");
+        const carrots = new Product("Carrots", 2, "Perfect for an afternoon snack");
+        const mangos = new Product("Mangos", 3, "The tastiest fruit you can buy");
+        
+        const myFirstOrder = new Cart();
+        myFirstOrder.addProduct(mangos);
+        myFirstOrder.addProduct(carrots);
+        const mySecondOrder = new Cart();
+        mySecondOrder.addProduct(strawberries);
+        francis.addToOrderHistory(myFirstOrder);
+    
+        expect(francis.orderHistory.length).toEqual(1);
+        expect(francis.rewardPoints).toEqual(5);
+        francis.addToOrderHistory(mySecondOrder);
+        expect(francis.orderHistory.length).toEqual(2);
+        expect(francis.rewardPoints).toBe(10);
     });
 })
 
